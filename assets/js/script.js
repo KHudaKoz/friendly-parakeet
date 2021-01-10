@@ -21,10 +21,10 @@ function passwordGen() {
   //IF TRUE, PROMPT OTHER QUESTION MOVE ON THER QUESTION.
 
   //PROMPTED FOR OTHER QUESTION AND CREATION OF VAR.  
-      var numbers = prompt("Do you want numbers in your password?");
-      var special = prompt("Do you want special characters in your password?");
-      var lowerCaseLetters = prompt("Do you want lowercaseLetters in your password?");
-      var upperCaseLetters = prompt("Do you want uppercaseLetters in your password?");
+      var numbers = confirm("Do you want numbers in your password?");
+      var special = confirm("Do you want special characters in your password?");
+      var lowerCaseLetters = confirm("Do you want lowercase Letters in your password?");
+      var upperCaseLetters = confirm("Do you want uppercase Letters in your password?");
       
 
   //ESTABLISH MINIMUM FIVE VAR: 8-128, NUMBERS, LOWERCASE LETTERS, UPPERCASE LETTERS
@@ -34,12 +34,21 @@ function passwordGen() {
       var minimumUpperCaseLetters = "";
       var minimumSpecialCharacters = "";
 
-  // STRING VARIABLE FOR LOOP BELOW
-        for (let i = 0; i < (parseInt(passwordLength) - minimumCount); i++) {
-          var randomNumberPicked = Math.floor(Math.random() * 4);
-          randomPasswordGenerated += randomNumberPicked;
-        }
-  // Checks to make sure user selected ok for all and uses empty minimums from above
+       var functionArray = {
+    getNumbers: function() {
+      return String.fromCharCode(Math.floor(Math.random() * 10 + 48));
+    },
+    getLowerCaseLetters: function() {
+      return String.fromCharCode(Math.floor(Math.random() * 26 + 97));
+    },
+    getUpperCaseLetters: function() {
+      return String.fromCharCode(Math.floor(Math.random() * 26 + 65));
+    },
+    getSpecialCharacters: function() {
+      return specialCharacters[Math.floor(Math.random() * specialCharacters.length)]
+    }
+}; 
+ // CHECKED FOR ALL AND EMPTIES ABOVE
       if (numbers === true) {
         minimumNumbers = functionArray.getNumbers();
         minimumCount++;
@@ -56,7 +65,11 @@ function passwordGen() {
         minimumSpecialCharacters = functionArray.getSpecialCharacters();
         minimumCount++;
       }
- 
+  // STRING VARIABLE FOR LOOP BELOW
+        for (let i = 0; i < (parseInt(passwordLength) - minimumCount); i++) {
+          var randomNumberPicked = Math.floor(Math.random() * 4);
+          randomPasswordGenerated += randomNumberPicked;
+        }
         var randomPasswordGenerated = "";
         // to make sure characters are added to the password
         randomPasswordGenerated += minimumNumbers;
@@ -66,20 +79,7 @@ function passwordGen() {
         return randomPasswordGenerated;
  
   // GENERATE NUMBERS VAR
-  var functionArray = {
-    getNumbers: function() {
-      return String.fromCharCode(Math.floor(Math.random() * 10 + 48));
-    },
-    getLowerCaseLetters: function() {
-      return String.fromCharCode(Math.floor(Math.random() * 26 + 97));
-    },
-    getUpperCaseLetters: function() {
-      return String.fromCharCode(Math.floor(Math.random() * 26 + 65));
-    },
-    getSpecialCharacters: function() {
-      return specialCharacters[Math.floor(Math.random() * specialCharacters.length)]
-    }
-}; 
+ 
 }
 
-//ISSUES ALLOW TO USER TO 
+ 
