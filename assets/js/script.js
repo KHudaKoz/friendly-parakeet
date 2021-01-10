@@ -54,7 +54,7 @@ function passwordGen() {
         minimumCount++;
       }
       if (lowerCaseLetters === true) {
-        minimumLowerCaseLetters = functionArray.getLowerCases();
+        minimumLowerCaseLetters = functionArray.getLowerCaseLetters();
         minimumCount++;
       }
       if (upperCaseLetters === true) {
@@ -73,7 +73,7 @@ function passwordGen() {
         var randomPasswordGenerated = "";
         // to make sure characters are added to the password
         randomPasswordGenerated += minimumNumbers;
-        randomPasswordGenerated += minimumLowerCases;
+        randomPasswordGenerated += minimumLowerCasesletters;
         randomPasswordGenerated += minimumUpperCaseLetters;
         randomPasswordGenerated += minimumSpecialCharacters;
         return randomPasswordGenerated;
