@@ -8,15 +8,15 @@ generateButton.addEventListener('click', writePassword)
 
 // GOT TO START THE PROCESS OF CREATING. INPUT THROUG FUNCTION ONCE BUTTON CLICKED//  
 function writePassword() {
-  var password = passwordGen();
+  var password = passWordGenerater();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
 // PROMPT WITH NUMBER RANGE 8 -128 USING FUNCTION WITH VAR AND NEST IF STATEMENT TO REQUEST NUMBER RANGE 
-function passwordGen() {
+function passWordGenerater() {
   var passwordLength = window.prompt("please enter a number between 8 and 128 to determine the length of password ");
       if (passwordLength >=  129 || passwordLength <= 7|| passwordLength == ""|| passwordLength == specialCharacters) {
-        return passwordGen();
+        return passWordGenerater();
       }
   //IF TRUE, PROMPT OTHER QUESTION MOVE ON THER QUESTION.
 
@@ -67,13 +67,13 @@ function passwordGen() {
       }
   // STRING VARIABLE FOR LOOP BELOW
         for (let i = 0; i < (parseInt(passwordLength) - minimumCount); i++) {
-          var randomNumberPicked = Math.floor(Math.random() * 4);
+          var randomNumberPicked = Math.floor(Math.random() * 128);
           randomPasswordGenerated += randomNumberPicked;
         }
         var randomPasswordGenerated = "";
         // to make sure characters are added to the password
         randomPasswordGenerated += minimumNumbers;
-        randomPasswordGenerated += minimumLowerCasesletters;
+        randomPasswordGenerated += minimumLowerCaseLetters;
         randomPasswordGenerated += minimumUpperCaseLetters;
         randomPasswordGenerated += minimumSpecialCharacters;
         return randomPasswordGenerated;
