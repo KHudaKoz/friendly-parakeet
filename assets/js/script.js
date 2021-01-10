@@ -1,31 +1,39 @@
 
-// NEED TO ESTABLISH SPECIAL CHARACTORS. 
-const specialCharacters = ["!", "@", "#", "$", "%", "^", "&", "*"]
-const generateButton = document.getElementById('generate')
 
-//NEED TO ACTIVATE BUTTON TO GENERATED BUTTON.  
-generateButton.addEventListener('click', writePassword)
+//BUTTON PROMPT TO BEGIN.  
+var generateButton = document.getElementById('generaterandom');
+generateButton.addEventListener('click', function() {
+  generateNewPassword();
+});
 
 // GOT TO START THE PROCESS OF CREATING. INPUT THROUG FUNCTION ONCE BUTTON CLICKED//  
-function writePassword() {
-  var password = passWordGenerater();
-  var passwordText = document.querySelector("#password");
-  passwordText.value = password;
+    function writePassword() {
+    var password = passWordGenerater();
+    var passwordText = document.querySelector("#password");
+    passwordText.value = password;
 }
-// PROMPT WITH NUMBER RANGE 8 -128 USING FUNCTION WITH VAR AND NEST IF STATEMENT TO REQUEST NUMBER RANGE 
-function passWordGenerater() {
-  var passwordLength = window.prompt("please enter a number between 8 and 128 to determine the length of password ");
-      if (passwordLength >=  129 || passwordLength <= 7|| passwordLength == ""|| passwordLength == specialCharacters) {
-        return passWordGenerater();
-      }
-  //IF TRUE, PROMPT OTHER QUESTION MOVE ON THER QUESTION.
+// PROMPT WITH NUMBER RANGE 8 -128 USING FUNCTION WITH VAR AND NEST IF 
+    function generateNewPassword() {
+    var length = Number(prompt("Please select the desired charactor length within the new password.  Select a number between 8-128."));
+    while (Number.isNaN(length) || length < 8 || length > 128) length = Number(prompt ("You must select a number no-less than 8 but no more than 128 characters."));
 
-  //PROMPTED FOR OTHER QUESTION AND CREATION OF VAR.  
-      var numbers = confirm("Do you want numbers in your password?");
-      var special = confirm("Do you want special characters in your password?");
-      var lowerCaseLetters = confirm("Do you want lowercase Letters in your password?");
-      var upperCaseLetters = confirm("Do you want uppercase Letters in your password?");
+// VARIBLES WITH CONFIRMS BOLIENS T || F : uppercaseletters, lowercaseletters< NUMBERS, SYMBOLS
+      var numbers = confirm("Should numbers be included in the new password?  OK = YES, and CANCLE = NO.");
+      var special = confirm("Should special characters be included in the new password? OK = YES, and CANCLE = NO.");
+      var lowercaseletters = confirm("Should lowercase letters be included in your password? OK = YES, and CANCLE = NO.");
+      var uppercaseletters = confirm("Should UPPERCASE letters be included in your password? OK = YES, and CANCLE = NO.");
+
+// CONFIRM INCLUDE QESTIONS>
       
+    while (!uppercaseletters && !lowercaseletters && !numbers && !symbols) {
+      alert("You fail to select at least one character type! Try again.");
+      numbers = confirm("Should numbers be included in the new password?  OK = YES, and CANCLE = NO.");
+      symbols = confirm("Should special characters be included in the new password? OK = YES, and CANCLE = NO.");
+      lowercaseletters = confirm("Should lowercase letters be included in your password? OK = YES, and CANCLE = NO.");
+      uppercaseletters = confirm("Should UPPERCASE letters be included in your password? OK = YES, and CANCLE = NO.");
+      
+
+    }
 
   //ESTABLISH MINIMUM FIVE VAR: 8-128, NUMBERS, LOWERCASE LETTERS, UPPERCASE LETTERS
       var minimumCount = 0;
