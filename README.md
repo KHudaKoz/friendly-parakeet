@@ -1,5 +1,13 @@
 # Friendly Parakeet
 
+## Table of Contents (Optional)
+​
+* [Discription of Repository](#Discription)
+* [Usage](#usage)
+* [Installation](#installation)
+* [Credits](#credits)
+* [License](#license)
+
 ## Description of Repository
 ​
  The Friendly Parakeet repository resulted out of a need to creat a random password generation application which generates a passwords uses criteria that the employee selects to create a strong password.  It will need to be clean and polish and working on mulitple screen sizes.    The acceptance criteria was based on the following:  
@@ -11,57 +19,49 @@
  * Imput types should be validated and must contain one charactor type.
  * Password must match all selected criteria and display in window of html page.  
 
+
 ## The Material Provided.
- The codebase presented was heavily riddle with class for form and reliant on a css.style sheet for styling and positioning.
+ The codebase presented included a basice html structure, and developed css.style sheet for an already established style. See below. 
 
-## How It Was Fixed
+## Usage
+![image of Site](assets/images/fontpage.png)
 
-In order to meet the demands of the clients, the exist code base was analyzed for HTML semantic elements.  After discovering the basic structure was designed with div element and class attributes, semantic html structure was deployed.  For example, certain div elements were convert in it semantic elements in the following order BODY, HEAD, HEADER, SECTIONS 1/HERO, SECTION 2/MAIN SERVICE, SECTION 3/BENEFITS, and FOOTER.  
-Each individual change is annotated within the HTML CODE.    
+## How criteria was meet. 
+
+To meet the demands of the clients, a javascript folder and page was created.  From there, the Generate Password button was link, then a function was created with multiple var goverened by while loops to create a boolean true or false statement.  From there, var were created with allowed with the use of stings which allowed for loop to generate random password based on criteria, all aided by a math.floor and math random loop.  
 
 ## What I learned
 
-There are always opportunities to refract and consolidate code, and do be affair to rename attribute and classes. 
+I learned simple is better.  Original code generator was based on rando generator. I did get it to function, but did not fully understand it.  As a result, with a little bit of coaching by the Tearher Assist, I was able to eleminate multiple lines of code.  
 ​
 ## How to View Website and Repository
 ​
-To veiw Horiseon's deployed website or the repository containing deployed websites files use the links below:
+To veiw Friendly deployed website or the repository containing deployed websites files use the links below:
 
 * For Github Repository [Friendly-Parakeet Repository](https://github.com/KHudaKoz/friendly-parakeet) 
 ​
 * For Live Deployed Site [Friendly-Parakeet Deployed](https://khudakoz.github.io/friendly-parakeet/).
 ​
 ​
-## Table of Contents (Optional)
-​
-If your README is very long, add a table of contents to make it easy for users to find what they need.
-​
-* [Installation](#installation)
-* [Usage](#usage)
-* [Credits](#credits)
-* [License](#license)
-​
 ​
 ## Installation
 ​
-Code was presented as a codebase develop pack and was ask to refract code and make site follow accessibility standards so site is optimized for search engines. 
-
-## USAGE
-​
-You can view the change by visiting live sites or going to the repository.   
-
-
-![Image Of Project]()
-​
+YOu can use the live deploy link above and follow the process.  For a closer look. Do a git pull and clone repository.  From there, have fun and remember to SMILE. 
 
 ## Credits 
 ​
-All though there is no other individual whom contribute code to this project challenge,  the task could not have been accomplish without the assistance of Howard Salter how unconfused be on git hub, and Carlos Toledo who broke ccs down to me like I was five.
+I like to thanks Cody, Westley, and Urika, and Carlso for lending and ear and some times their minds as talk this moster alive. Thanks all.  
+
+// Links that helped get to the proper conclusion for providing the solutions to our users requirements..
+
+https://stackoverflow.com/questions/1497481/javascript-password-generator/29770068
+
+https://stackoverflow.com/questions/59340866/random-password-generator-javascript-not-working
 ​
 ​
 ## License
 ​
-If you would like to se a copy of the license agreement, feel free to visit the following link [License Agreement](https://github.com/KHudaKoz/Horiseon-Seo/blob/main/License.md)
+If you would like to se a copy of the license agreement, feel free to visit the following link [License Agreement](https://github.com/KHudaKoz/friendly-parakeet/blob/main/LICENSE)
 ​
 ​
 ​
