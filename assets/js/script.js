@@ -27,7 +27,7 @@ function generateNewPassword() {
 
   // START CREATE RANDOM PASSWORD
   var password = "";
-  //BEGIN RANDOM GENERATION VAR=ALLOWED
+  //BEGIN RANDOM GENERATION THATH SHOULD BE ALLOWED
   var allowed = "";
   if (numbers) allowed += "1234567890";
   if (symbols) allowed += "!@#$%^&*(){}[]=<>/,.";
@@ -40,8 +40,3 @@ function generateNewPassword() {
   document.getElementById("password").value = password;
 
 }
-
-
-    
-
-
