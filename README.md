@@ -46,12 +46,12 @@ If your README is very long, add a table of contents to make it easy for users t
 ​
 Code was presented as a codebase develop pack and was ask to refract code and make site follow accessibility standards so site is optimized for search engines. 
 
-## Image of Site
+## USAGE
 ​
 You can view the change by visiting live sites or going to the repository.   
 
-![](assets/frontpage.PNG)
 
+![Image Of Project]()
 ​
 
 ## Credits 
